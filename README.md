@@ -9,7 +9,7 @@ performance on *valset* [in training, fine-annotated trainset only, flip-augment
 
 classes | IoU | nIoU
 -------------|-------------|-------------
-**Score Average**  | **0.791**   |  **0.617**
+'**Score Average**'  | **'0.791'**   |  **0.617**
 road           | 0.984   |    nan
 sidewalk       | 0.866   |    nan
 building       | 0.931   |    nan
