@@ -5,10 +5,11 @@ see http://www.ics.uci.edu/~skong2/recurrentDepthSeg
 
 
 ## cityscapes dataset
-performance on valset [in training, fine-annotated trainset only, flip-augmentation only, one GPU, resnet101 as front-end chunk, softmax loss, multi-scale test]
+performance on *valset* [in training, fine-annotated trainset only, flip-augmentation only, one GPU, resnet101 as front-end chunk, softmax loss, multi-scale test]
 
 classes | IoU | nIoU
 -------------|-------------|-------------
+**Score Average  | 0.791   |  0.617**
 road           | 0.984   |    nan
 sidewalk       | 0.866   |    nan
 building       | 0.931   |    nan
@@ -28,7 +29,6 @@ bus            | 0.856   |  0.666
 train          | 0.780   |  0.580
 motorcycle     | 0.678   |  0.509
 bicycle        | 0.780   |  0.624
-Score Average  | 0.791   |  0.617
 
 
 04/22/2017
