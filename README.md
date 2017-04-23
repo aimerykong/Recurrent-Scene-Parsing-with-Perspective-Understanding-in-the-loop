@@ -7,7 +7,10 @@ see http://www.ics.uci.edu/~skong2/recurrentDepthSeg
 
 cityscapes dataset
 
+classes | IoU | nIoU
+-------------|-------------|-------------
 road           | 0.984   |    nan
+-------------|-------------|-------------
 sidewalk       | 0.866   |    nan
 -------------|-------------|-------------
 building       | 0.931   |    nan
