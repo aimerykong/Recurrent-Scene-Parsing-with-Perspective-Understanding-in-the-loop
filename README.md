@@ -4,8 +4,8 @@
 see http://www.ics.uci.edu/~skong2/recurrentDepthSeg
 
 
-
-performance on valset of cityscapes dataset [in training, fine-annotated trainset only, flip-augmentation only, one GPU, resnet101 as front-end chunk, softmax loss, multi-scale test]
+## cityscapes dataset
+performance on valset [in training, fine-annotated trainset only, flip-augmentation only, one GPU, resnet101 as front-end chunk, softmax loss, multi-scale test]
 
 classes | IoU | nIoU
 -------------|-------------|-------------
