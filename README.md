@@ -1,7 +1,9 @@
 # Recurrent Scene Parser with Perspective Understanding in the Loop
 
+![alt text](http://www.ics.uci.edu/~skong2/img/rnn_estDepth.png "visualization")
 
-see [project page](http://www.ics.uci.edu/~skong2/recurrentDepthSeg)
+
+For details, please refer to our [project page](http://www.ics.uci.edu/~skong2/recurrentDepthSeg)
 
 
 ## cityscapes dataset
