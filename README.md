@@ -9,8 +9,8 @@ performance on *valset* [in training, fine-annotated trainset only, flip-augment
 
 
 
-road | sidewalk | building | wall | fence | pole | traffic light | traffic sign | vegetation | terrain | sky | person | rider | car | truck | bus | train | motorcycle | bicycle
---|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+classes | **`Score Average`** | road | sidewalk | building | wall | fence | pole | traffic light | traffic sign | vegetation | terrain | sky | person | rider | car | truck | bus | train | motorcycle | bicycle
+--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--
 
 
 classes | IoU | nIoU
