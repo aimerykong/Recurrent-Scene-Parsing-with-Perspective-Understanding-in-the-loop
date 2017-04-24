@@ -11,8 +11,8 @@ performance on *valset* [in training, fine-annotated trainset only, flip-augment
 
 classes | **`Score Average`** | road | sidewalk | building | wall | fence | pole | traffic light | traffic sign | vegetation | terrain | sky | person | rider | car | truck | bus | train | motorcycle | bicycle
 --|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--
-IoU      | **`0.791`** | 0.984     | 0.866     | 0.931      | 0.573      | 0.642     | 0.667 | 0.723   |  0.816       | 0.929     | 0.647     | **`0.617`** | 0.951     | 0.834    | 0.645      | 0.954    | 0.777      | 0.856    | 0.780     | 0.678     | 0.780 
-nIoU |     nan|    nan|    nan |    nan |    nan |    nan|  nan|   nan|    nan|    nan |    nan |  0.678|  0.512 |  0.889|  0.476 |  0.666|  0.580|  0.509|  0.624
+IoU      | **`0.791`** | 0.984     | 0.866     | 0.931      | 0.573      | 0.642     | 0.667 | 0.723   |  0.816       | 0.929     | 0.647      | 0.951     | 0.834    | 0.645      | 0.954    | 0.777      | 0.856    | 0.780     | 0.678     | 0.780 
+nIoU | **`0.617`** |     nan|    nan|    nan |    nan |    nan |    nan|  nan|   nan|    nan|    nan |    nan |  0.678|  0.512 |  0.889|  0.476 |  0.666|  0.580|  0.509|  0.624
 
 
 nIoU
