@@ -1,11 +1,17 @@
 # Recurrent-Scene-Parser-with-depthEstimation-in-the-loop
 
 
-see http://www.ics.uci.edu/~skong2/recurrentDepthSeg
+see [project page](http://www.ics.uci.edu/~skong2/recurrentDepthSeg)
 
 
 ## cityscapes dataset
 performance on *valset* [in training, fine-annotated trainset only, flip-augmentation only, one GPU, resnet101 as front-end chunk, softmax loss, multi-scale test]
+
+
+
+road | sidewalk | building | wall | fence | pole | traffic light | traffic sign | vegetation | terrain | sky | person | rider | car | truck | bus | train | motorcycle | bicycle
+--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+
 
 classes | IoU | nIoU
 -------------|-------------|-------------
