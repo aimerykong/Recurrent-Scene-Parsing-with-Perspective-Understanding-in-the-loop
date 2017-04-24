@@ -5,7 +5,7 @@ see [project page](http://www.ics.uci.edu/~skong2/recurrentDepthSeg)
 
 
 ## cityscapes dataset
-performance on *valset* [in training, fine-annotated trainset only, flip-augmentation only, one GPU, resnet101 as front-end chunk, softmax loss, multi-scale test]
+performance on *valset* [in training, fine-annotated trainset only, flip-augmentation only, one GPU, resnet101 as front-end chunk, softmax loss, test w/o augmentation unless specified]
 
 
 #### baseline (deeplab with single scale branch)
@@ -23,15 +23,22 @@ IoU | **`0.748`** | 0.981 | 0.849 | 0.918|0.506 |0.605 |0.604 | 0.67| 0.775| 0.9
 nIoU |**`0.556`** |   nan|   nan|   nan|  nan|  nan|  nan|    nan|    nan|   nan|   nan|  nan|0.639|0.460|0.863|0.407|0.612|0.489| 0.398|0.575|
 
 
-#### baseline + perspective estimation + loop-1
+#### RecurrentLoop-1 w/ perspective estimation
+
 classes | **`Score Average`** | road | sidewalk | building | wall | fence | pole | traffic light | traffic sign | vegetation | terrain | sky | person | rider | car | truck | bus | train | motorcycle | bicycle
 --|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--
 IoU | **`0.772`**  |0.983  | 0.859 | 0.925 |0.527  |0.628  |0.640  | 0.703| 0.795 | 0.923 | 0.630  |0.946  |0.816  |0.620  |0.950  |0.748  |0.839  |0.753  | 0.626 | 0.764  |
 nIoU | **`0.589`**|   nan|   nan|   nan|  nan|  nan|  nan|    nan|    nan|   nan|   nan|  nan|0.660|0.483|0.869|0.446|0.632|0.572| 0.452| 0.597|
 
 
+#### RecurrentLoop-2 w/ perspective estimation
 
-#### ours-loop-2
+classes | **`Score Average`** | road | sidewalk | building | wall | fence | pole | traffic light | traffic sign | vegetation | terrain | sky | person | rider | car | truck | bus | train | motorcycle | bicycle
+--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--
+IoU | **`0.776`**|0.983  | 0.860  | 0.926  |0.549   |0.623  |0.641   | 0.711 | 0.800 | 0.925 | 0.639  |0.947   |0.822  |0.629  |0.950   |0.737  |0.835   |0.752  | 0.642 | 0.772  |
+nIoU | **`0.590`**|  nan|   nan|   nan|  nan|  nan|  nan|    nan|    nan|   nan|   nan|  nan|0.656|0.484|0.877|0.451|0.632|0.556| 0.464| 0.601|
+
+#### RecurrentLoop-2 w/ perspective estimation (multi-scale when testing)
 
 classes | **`Score Average`** | road | sidewalk | building | wall | fence | pole | traffic light | traffic sign | vegetation | terrain | sky | person | rider | car | truck | bus | train | motorcycle | bicycle
 --|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--
