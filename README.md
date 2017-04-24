@@ -15,6 +15,13 @@ classes | **`Score Average`** | road | sidewalk | building | wall | fence | pole
 IoU | 0.738 | 0.980  |  0.849 |  0.916 | 0.475  | 0.596  | 0.598  | 0.684|  0.780 | 0.918 |  0.619  | 0.941  | 0.803  | 0.594  | 0.939  | 0.631  | 0.759  | 0.621   |  0.562 | 0.755    
 nIoU |  0.547 | nan |    nan|     nan|   nan|   nan|   nan|     nan|     nan|    nan|    nan|   nan| 0.635| 0.448| 0.859| 0.398| 0.595| 0.467|  0.396|  0.582
 
+#### baseline + perspective estimation
+
+classes | **`Score Average`** | road | sidewalk | building | wall | fence | pole | traffic light | traffic sign | vegetation | terrain | sky | person | rider | car | truck | bus | train | motorcycle | bicycle
+--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--
+IoU | 0.748 | 0.981 | 0.849 | 0.918|0.506 |0.605 |0.604 | 0.67| 0.775| 0.918| 0.627|0.940 |0.804 |0.602 |0.942 |0.679 |0.787 |0.656 | 0.591| 0.753|
+nIoU |0.556 |   nan|   nan|   nan|  nan|  nan|  nan|    nan|    nan|   nan|   nan|  nan|0.639|0.460|0.863|0.407|0.612|0.489| 0.398|0.575|
+
 
 #### ours-loop-2
 
@@ -26,32 +33,6 @@ nIoU | **`0.617`** |     nan|    nan|    nan |    nan |    nan |    nan|  nan|  
 
 
 
-
-
-nIoU
-
-classes | IoU | nIoU
--------------|-------------|-------------
-**`Score Average`**  | **`0.791`**   |  **`0.617`**
-road           | 0.984   |    nan
-sidewalk       | 0.866   |    nan
-building       | 0.931   |    nan
-wall           | 0.573   |    nan
-fence          | 0.642   |    nan
-pole           | 0.667   |    nan
-traffic light  | 0.723   |    nan
-traffic sign   | 0.816   |    nan
-vegetation     | 0.929   |    nan
-terrain        | 0.647   |    nan
-sky            | 0.951   |    nan
-person         | 0.834   |  0.678
-rider          | 0.645   |  0.512
-car            | 0.954   |  0.889
-truck          | 0.777   |  0.476
-bus            | 0.856   |  0.666
-train          | 0.780   |  0.580
-motorcycle     | 0.678   |  0.509
-bicycle        | 0.780   |  0.624
 
 
 04/22/2017
