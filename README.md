@@ -9,10 +9,12 @@ performance on *valset* [in training, fine-annotated trainset only, flip-augment
 
 
 baseline (deeplab with single scale branch)
+
 classes | **`Score Average`** | road | sidewalk | building | wall | fence | pole | traffic light | traffic sign | vegetation | terrain | sky | person | rider | car | truck | bus | train | motorcycle | bicycle
 --|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--
 IoU | 0.738 | 0.980  |  0.849 |  0.916 | 0.475  | 0.596  | 0.598  | 0.684|  0.780 | 0.918 |  0.619  | 0.941  | 0.803  | 0.594  | 0.939  | 0.631  | 0.759  | 0.621   |  0.562 | 0.755    
 nIoU |  0.547 | nan |    nan|     nan|   nan|   nan|   nan|     nan|     nan|    nan|    nan|   nan| 0.635| 0.448| 0.859| 0.398| 0.595| 0.467|  0.396|  0.582
+
 
 ours-loop-2
 classes | **`Score Average`** | road | sidewalk | building | wall | fence | pole | traffic light | traffic sign | vegetation | terrain | sky | person | rider | car | truck | bus | train | motorcycle | bicycle
