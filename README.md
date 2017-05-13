@@ -1,7 +1,10 @@
 # Recurrent Scene Parser with Perspective Understanding in the Loop
 
-![alt text](http://www.ics.uci.edu/~skong2/img/rnn_estDepth.png "visualization")
+![alt text](http://www.ics.uci.edu/~skong2/img/figure4paper_cityscapes.png "visualization")
 
+![alt text](http://www.ics.uci.edu/~skong2/img/figure4paper_nyuv2.jpg "visualization")
+
+![alt text](http://www.ics.uci.edu/~skong2/img/demo_nyuv2_depth.jpg "visualization")
 
 For details, please refer to our [project page](http://www.ics.uci.edu/~skong2/recurrentDepthSeg)
 
