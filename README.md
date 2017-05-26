@@ -25,6 +25,13 @@ vl_compilenn('enableGpu', true, ...
 ```
 
 
+    @article{kong2017depthsegRNN,
+      title={Recurrent Scene Parsing with Perspective Understanding in the Loop},
+      author={Kong, Shu and Fowlkes, Charless},
+      journal={arXiv preprint arXiv:1705.07238},
+      year={2017}
+    }
+
 
 
 
