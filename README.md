@@ -13,6 +13,7 @@ MatConvNet is used in our project, some functions are changed. So it might be re
 ```python
 LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:local matlab 
 
+path_to_matconvnet = '../matconvnet';
 run(fullfile(path_to_matconvnet, 'matlab', 'vl_setupnn'));
 addpath(fullfile(path_to_matconvnet, 'matlab'));
 vl_compilenn('enableGpu', true, ...
