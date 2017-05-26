@@ -8,9 +8,20 @@ For details, please refer to our [project page](http://www.ics.uci.edu/~skong2/r
 
 To download our models, please go [google drive](https://drive.google.com/open?id=0BxeylfSgpk1MaVlNZV96eVVqdWM) and put the models in directory 'models'.
 
+MatConvNet is used in our project, some functions are changed. So it might be required to re-compile. Useful commands are --
 
+```python
+LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:local matlab 
 
+run(fullfile(path_to_matconvnet, 'matlab', 'vl_setupnn'));
+addpath(fullfile(path_to_matconvnet, 'matlab'));
+vl_compilenn('enableGpu', true, ...
+               'cudaRoot', '/usr/local/cuda-7.5', ...
+               'cudaMethod', 'nvcc', ...
+               'enableCudnn', true, ...
+               'cudnnRoot', '/usr/local/cuda-7.5/cudnn-v5') ;
 
+```
 
 
 
