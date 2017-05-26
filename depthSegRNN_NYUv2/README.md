@@ -9,6 +9,32 @@ For details, please refer to our [project page](http://www.ics.uci.edu/~skong2/r
 
 To download our models, please go [google drive](https://drive.google.com/open?id=0BxeylfSgpk1MaVlNZV96eVVqdWM) and put the models in directory 'models'.
 
+Script demo_NYUv2.m provides a demonstration to visualize the results. If you want to train the model, please refer to the script 'train_NYUv2.m'. To train it, you need to download the NYUv2 dataset, and modify imdb accordingly which is used to point to the images.
+
+
+
+```python
+LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:local matlab
+
+path_to_matconvnet = '../matconvnet';
+run(fullfile(path_to_matconvnet, 'matlab', 'vl_setupnn'));
+addpath(fullfile(path_to_matconvnet, 'matlab'));
+vl_compilenn('enableGpu', true, ...
+               'cudaRoot', '/usr/local/cuda-7.5', ...
+               'cudaMethod', 'nvcc', ...
+               'enableCudnn', true, ...
+               'cudnnRoot', '/usr/local/cuda-7.5/cudnn-v5') ;
+
+```
+
+
+    @article{kong2017depthsegRNN,
+      title={Recurrent Scene Parsing with Perspective Understanding in the Loop},
+      author={Kong, Shu and Fowlkes, Charless},
+      journal={arXiv preprint arXiv:1705.07238},
+      year={2017}
+    }
+
 
 
 
