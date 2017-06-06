@@ -8,7 +8,32 @@ For details, please refer to our [project page](http://www.ics.uci.edu/~skong2/r
 
 To download our models, please go [google drive](https://drive.google.com/open?id=0BxeylfSgpk1MaVlNZV96eVVqdWM) and put the models in directory 'models'.
 
-## cityscapes dataset
+Script demo_Cityscapes.m provides a demonstration to visualize the results. There are many comment lines as the ground-truth depth and annotation are not put here. When they are available with the correct path, one can uncomment to run and get the complete figures. Training scripts will be added soon.
+
+```python
+LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:local matlab
+
+path_to_matconvnet = '../matconvnet';
+run(fullfile(path_to_matconvnet, 'matlab', 'vl_setupnn'));
+addpath(fullfile(path_to_matconvnet, 'matlab'));
+vl_compilenn('enableGpu', true, ...
+               'cudaRoot', '/usr/local/cuda-7.5', ...
+               'cudaMethod', 'nvcc', ...
+               'enableCudnn', true, ...
+               'cudnnRoot', '/usr/local/cuda-7.5/cudnn-v5') ;
+
+```
+
+
+    @article{kong2017depthsegRNN,
+      title={Recurrent Scene Parsing with Perspective Understanding in the Loop},
+      author={Kong, Shu and Fowlkes, Charless},
+      journal={arXiv preprint arXiv:1705.07238},
+      year={2017}
+    }
+
+
+## Cityscapes dataset
 performance on *valset* [in training, fine-annotated trainset only, flip-augmentation only, one GPU, resnet101 as front-end chunk, softmax loss, test w/o augmentation unless specified]
 
 
@@ -54,5 +79,5 @@ nIoU | **`0.617`** |     nan|    nan|    nan |    nan |    nan |    nan|  nan|  
 
 
 
-05/24/2017
+06/6/2017
 Shu Kong @ UCI
