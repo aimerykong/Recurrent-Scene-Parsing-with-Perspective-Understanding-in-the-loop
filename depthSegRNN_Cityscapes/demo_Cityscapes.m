@@ -71,6 +71,14 @@ modelName = 'Cityscapes_softmax_net-epoch-7.mat';
 %% setup network
 netMat = load( fullfile(path_to_model, modelName) );
 netMat = netMat.net;
+for i = 1:numel(netMat.layers)            
+    curLayerName = netMat.layers(i).name;
+    if ~isempty(strfind(curLayerName, 'bn'))
+        netMat.layers(i).block = rmfield(netMat.layers(i).block, 'usingGlobal');
+        netMat.layers(i).block.bnorm_moment_type_trn = 'global';
+        netMat.layers(i).block.bnorm_moment_type_tst = 'global';        
+    end
+end 
 netMat = dagnn.DagNN.loadobj(netMat);
 
 rmLayerName = 'obj_div1_seg';
