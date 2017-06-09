@@ -27,7 +27,7 @@ run(fullfile(path_to_matconvnet, 'matlab', 'vl_setupnn'));
 addpath(genpath(fullfile('dependencies', 'matconvnet','examples')));
 
 % set GPU 
-gpuId = 2; %[1, 2];
+gpuId = 3; %[1, 2];
 gpuDevice(gpuId);
 %% load imdb and dataset file
 load('imdb_NYUv2_offline.mat');

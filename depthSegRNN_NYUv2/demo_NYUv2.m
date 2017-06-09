@@ -53,6 +53,9 @@ imgList = dir('./*jpg');
 
 for imgIdx = 1:length(imgList)
     imOrg = single(imread(imgList(imgIdx).name));
+    [~, tmpname, ~] = fileparts(imgList(imgIdx).name);
+    load(fullfile('./sampleMatFiles', tmpname), 'datamat');
+    
     %% feed into the network
     fprintf('image-%03d %s ... ', imgIdx, imgList(imgIdx).name);
     imFeed = bsxfun(@minus, imOrg, mean_rgb);                    
@@ -109,20 +112,26 @@ for imgIdx = 1:length(imgList)
     windowID = 1;
     
     % ground-truth
-    subplot(subWindowH,subWindowW,windowID); windowID = windowID + 6;
+    gtDepthOrg = datamat.depth;
+    gtDepthBin = datamat.depthBin;
+    gtSeg = datamat.segGT;
+    gtSegColor = NYUv2_label2color.mask_cmap(gtSeg(:)+1,:);
+    gtSegColor = reshape(gtSegColor, [size(gtSeg,1),size(gtSeg,2),3]);
+    
+    subplot(subWindowH,subWindowW,windowID); windowID = windowID + 1;
     imagesc(uint8(imOrg)); title(sprintf('image-%04d', imgIdx)); axis off image;
-%     subplot(subWindowH,subWindowW,windowID); windowID = windowID + 1;
-%     imagesc(gtDepthOrg); title(sprintf('gtDepthOrg')); axis off image;
-%     subplot(subWindowH,subWindowW,windowID); windowID = windowID + 1;
-%     gtDepthOrgLog = gtDepthOrg;
-%     gtDepthOrgLog(gtDepthOrgLog<1) = 1;
-%     imagesc(log(gtDepthOrg) ); title(sprintf('gtDepthOrg log space')); axis off image;
-%     subplot(subWindowH,subWindowW,windowID); windowID = windowID + 1;
-%     imagesc(gtDepthBin); title(sprintf('gtDepthBin'));  axis off image;  caxis([0 5])
-%     subplot(subWindowH,subWindowW,windowID); windowID = windowID + 1;
-%     imagesc(gtSeg); title(sprintf('gtSeg'));  axis off image; caxis([0 40]) 
-%     subplot(subWindowH,subWindowW,windowID); windowID = windowID + 1;
-%     imagesc(gtSegColor); title(sprintf('gtSegColor'));  axis off image; caxis([0 5]);     
+    subplot(subWindowH,subWindowW,windowID); windowID = windowID + 1;
+    imagesc(gtDepthOrg); title(sprintf('gtDepthOrg')); axis off image; 
+    subplot(subWindowH,subWindowW,windowID); windowID = windowID + 1;
+    gtDepthOrgLog = gtDepthOrg;
+    gtDepthOrgLog(gtDepthOrgLog<1) = 1;
+    imagesc(log(gtDepthOrg) ); title(sprintf('gtDepthOrg log space')); axis off image;
+    subplot(subWindowH,subWindowW,windowID); windowID = windowID + 1;
+    imagesc(gtDepthBin); title(sprintf('gtDepthBin'));  axis off image;  caxis([0 5])
+    subplot(subWindowH,subWindowW,windowID); windowID = windowID + 1;
+    imagesc(gtSeg); title(sprintf('gtSeg'));  axis off image; caxis([0 40]) 
+    subplot(subWindowH,subWindowW,windowID); windowID = windowID + 1;
+    imagesc(gtSegColor); title(sprintf('gtSegColor'));  axis off image; caxis([0 5]);     
        
     % result from the forward-pathway
     subplot(subWindowH,subWindowW,windowID); windowID = windowID + 1;
