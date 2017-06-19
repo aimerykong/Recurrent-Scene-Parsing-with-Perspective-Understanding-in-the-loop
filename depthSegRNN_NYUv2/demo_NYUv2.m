@@ -29,7 +29,7 @@ mean_rgb = reshape([mean_r, mean_g, mean_b], [1,1,3]);
 
 %% read matconvnet model
 % set GPU
-gpuId = 3; %[1, 2];
+gpuId = 2; %[1, 2];
 gpuDevice(gpuId);
 flagSaveFig = true; % {true false} whether to store the result
 
