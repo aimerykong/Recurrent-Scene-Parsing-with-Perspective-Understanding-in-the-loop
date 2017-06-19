@@ -9,7 +9,7 @@ For details, please refer to our [project page](http://www.ics.uci.edu/~skong2/r
 
 To download our models, please go [google drive](https://drive.google.com/open?id=0BxeylfSgpk1MaVlNZV96eVVqdWM) and put the models in directory 'models'.
 
-Script demo_NYUv2.m provides a demonstration to visualize the results. If you want to train the model, please refer to the script 'train_NYUv2.m'. To train it, you need to download the NYUv2 dataset, and modify imdb accordingly which is used to point to the images.
+Script [demo_NYUv2.m](https://github.com/aimerykong/Recurrent-Scene-Parsing-with-Perspective-Understanding-in-the-loop/blob/master/depthSegRNN_NYUv2/demo_NYUv2.m) provides a demonstration to visualize the results. If you want to train the model, please refer to the script [train_NYUv2.m](https://github.com/aimerykong/Recurrent-Scene-Parsing-with-Perspective-Understanding-in-the-loop/blob/master/depthSegRNN_NYUv2/train_NYUv2.m). To train it, you need to download the NYUv2 dataset, and modify imdb accordingly which is used to point to the images.
 
 
 
