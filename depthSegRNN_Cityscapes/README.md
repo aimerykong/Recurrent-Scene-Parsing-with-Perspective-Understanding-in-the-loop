@@ -8,7 +8,7 @@ For details, please refer to our [project page](http://www.ics.uci.edu/~skong2/r
 
 To download our models, please go [google drive](https://drive.google.com/open?id=0BxeylfSgpk1MaVlNZV96eVVqdWM) and put the models in directory 'models'.
 
-Script demo_Cityscapes.m provides a demonstration to visualize the results. There are many comment lines as the ground-truth depth and annotation are not put here. When they are available with the correct path, one can uncomment to run and get the complete figures. Script train_Cityscapes.m is used for training the model. Here, as an example, it loads the model used for demostration, and adds the third loop to fine-tune.
+Script [demo_Cityscapes.m](https://github.com/aimerykong/Recurrent-Scene-Parsing-with-Perspective-Understanding-in-the-loop/blob/master/depthSegRNN_Cityscapes/demo_Cityscapes.m) provides a demonstration to visualize the results. There are many comment lines as the ground-truth depth and annotation are not put here. When they are available with the correct path, one can uncomment to run and get the complete figures. Script [train_Cityscapes.m](https://github.com/aimerykong/Recurrent-Scene-Parsing-with-Perspective-Understanding-in-the-loop/blob/master/depthSegRNN_Cityscapes/train_Cityscapes.m) is used for training the model. Here, as an example, it loads the model used for demostration, and adds the third loop to fine-tune.
 
 ```python
 LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:local matlab
@@ -79,5 +79,5 @@ nIoU | **`0.617`** |     nan|    nan|    nan |    nan |    nan |    nan|  nan|  
 
 
 
-06/6/2017
+06/19/2017
 Shu Kong @ UCI
