@@ -28,6 +28,7 @@ vl_compilenn('enableGpu', true, ...
 ```
 
 If you find the code useful, please city our work
+
     @article{kong2017depthsegRNN,
       title={Recurrent Scene Parsing with Perspective Understanding in the Loop},
       author={Kong, Shu and Fowlkes, Charless},
